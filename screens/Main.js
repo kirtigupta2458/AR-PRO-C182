@@ -70,16 +70,7 @@ export default class Main extends Component {
             onFacesDetectionError={this.onFacesDetectionError}
           />
           {this.state.faces.map(face => (
-            <Filter1
-              key={`face-id-${face.faceID}`}
-              face={face}
-              source={require("../assets/crown-pic1.png")}
-              width={3.5}
-              height={0.7}
-              left={0.46}
-              right={0.15}
-              top={1.5}
-            />
+            <Filter1 key={`face-id-${face.faceID}`} face={face} />
           ))}
         </View>
         <View style={styles.lowerContainer}>

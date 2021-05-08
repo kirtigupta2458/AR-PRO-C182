@@ -9,16 +9,10 @@ const Filter1 = ({
     leftEyePosition,
     rightEyePosition,
     noseBasePosition
-  },
-  source,
-  width,
-  height,
-  left,
-  right,
-  top
+  }
 }) => {
-  const filterWidth = faceWidth * width;
-  const filterHeight = faceHeight * height;
+  const filterWidth = faceWidth * 3.5;
+  const filterHeight = faceHeight * 0.7;
 
   const transformAngle = (
     angleRad = Math.atan(
@@ -31,13 +25,13 @@ const Filter1 = ({
     <View
       style={{
         position: "absolute",
-        left: leftEyePosition.x - filterWidth * left,
-        right: rightEyePosition.x - filterWidth * right,
-        top: noseBasePosition.y - filterHeight * top
+        left: leftEyePosition.x - filterWidth * 0.46,
+        right: rightEyePosition.x - filterWidth * 0.15,
+        top: noseBasePosition.y - filterHeight * 1.5
       }}
     >
       <Image
-        source={source}
+        source={require("../assets/crown-pic1.png")}
         style={{
           width: filterWidth,
           height: filterHeight,
