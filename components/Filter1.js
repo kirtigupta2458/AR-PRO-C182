@@ -2,17 +2,7 @@ import React from "react";
 import { Image, View } from "react-native";
 
 const Filter1 = ({
-  face: {
-    bounds: {
-      size: { width: faceWidth, height: faceHeight }
-    },
-    leftEyePosition,
-    rightEyePosition,
-    noseBasePosition
-  }
-}) => {
-  const filterWidth = faceWidth * 3.5;
-  const filterHeight = faceHeight * 0.7;
+  
 
   const transformAngle = (
     angleRad = Math.atan(
